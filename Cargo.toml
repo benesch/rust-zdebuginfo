@@ -1,0 +1,12 @@
+[package]
+name = "rust-zdebuginfo"
+version = "0.1.0"
+authors = ["Nikhil Benesch <nikhil.benesch@gmail.com>"]
+edition = "2018"
+
+[features]
+gimli = ["backtrace/gimli-symbolize"]
+libbacktrace = ["backtrace/libbacktrace"]
+
+[dependencies]
+backtrace = { version = "0.3.48", default-features = false, features = ["std"] }
